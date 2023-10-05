@@ -52,16 +52,16 @@ window.addEventListener("load", () => {
     let orderList = [];
     localStorage.setItem("orderList", JSON.stringify(orderList));
   }
-  if (location.pathname === "/SSS-Shopping/pages/admin/adminindex.html") {
+  if (location.pathname === "/SSS-Shopping/admin/adminindex.html") {
     adminHomePageLoad();
   }
-  if (location.pathname === "/SSS-Shopping/pages/home.html") {
+  if (location.pathname === "/SSS-Shopping/home.html") {
     loadHomePage();
   }
-  if (location.pathname === "/SSS-Shopping/pages/orders.html") {
+  if (location.pathname === "/SSS-Shopping/orders.html") {
     orderPageLoad();
   }
-  if (location.pathname === "/SSS-Shopping/pages/admin/add-product.html") {
+  if (location.pathname === "/SSS-Shopping/admin/add-product.html") {
     let params = new URL(document.location).searchParams;
     let productId = params.get("id");
     if (productId) {
@@ -158,7 +158,7 @@ const registrationHandler = () => {
             setTimeout(() => {
               toastRef.classList.remove("fade", "show");
             }, 2000);
-            location.href = "/SSS-Shopping/pages/index.html";
+            location.href = "/SSS-Shopping/index.html";
           } else {
             signUpErrorref.innerText =
               "Please accept the terms and condition...";
@@ -232,10 +232,10 @@ const loginHandler = () => {
         // console.log(credentials.destiny);
         if (credentials.destiny === "admin") {
           sessionStorage.setItem("userId", credentials.id);
-          location.replace("/SSS-Shopping/pages/admin/adminindex.html");
+          location.replace("/SSS-Shopping/admin/adminindex.html");
         } else if (credentials.destiny === "user") {
           sessionStorage.setItem("userId", credentials.id);
-          location.replace("/SSS-Shopping/pages/home.html");
+          location.replace("/SSS-Shopping/home.html");
         }
       } else loginErrorref.innerText = "Account Not Found";
     } else {
@@ -286,7 +286,7 @@ let loadHomePage = () => {
   productViewRef.innerHTML = productDetails;
 };
 
-if (location.pathname === "/SSS-Shopping/pages/home.html") {
+if (location.pathname === "/SSS-Shopping/home.html") {
   loadHomePage();
 }
 // Add Product Start
@@ -335,7 +335,7 @@ const addProductPage = () => {
       toastRef.classList.remove("fade", "show");
     }, 2000);
     localStorage.setItem("productList", JSON.stringify(productList));
-    location.replace("/SSS-Shopping/pages/admin/adminindex.html");
+    location.replace("/SSS-Shopping/admin/adminindex.html");
   } else {
     const CatogorySelectorref = document.getElementById("CatogorySelector");
     const productIDref = document.getElementById("productID");
@@ -385,7 +385,7 @@ const addProductPage = () => {
                       "productList",
                       JSON.stringify(productList)
                     );
-                    location.replace("/SSS-Shopping/pages/index.html");
+                    location.replace("/SSS-Shopping/index.html");
                     toastMessageRef.innerText = "Product added successfully!!!";
                     toastRef.classList.add("fade", "show");
                     setTimeout(() => {
@@ -506,7 +506,7 @@ const DeleteProductHandler = (id) => {
 };
 // Admin Edit Product
 const editProductHandler = (id) => {
-  location.replace(`/SSS-Shopping/pages/add-product.html?id=${id}`);
+  location.replace(`/SSS-Shopping/add-product.html?id=${id}`);
 };
 // Load data in edit Product
 const populateProduct = (product) => {
@@ -601,7 +601,7 @@ const addToCart = (id) => {
     console.log(cartList);
 
     localStorage.setItem("cartList", JSON.stringify(cartList));
-  } else location.replace("/SSS-Shopping/pages/index.html");
+  } else location.replace("/SSS-Shopping/index.html");
 };
 const deleteCartHandler = (id) => {
   const cartList = JSON.parse(localStorage.getItem("cartList"));
@@ -609,7 +609,7 @@ const deleteCartHandler = (id) => {
     (prod) => parseInt(prod.productID) !== parseInt(id)
   );
   localStorage.setItem("cartList", JSON.stringify(filtered));
-  location.replace("/SSS-Shopping/pages/cart.html");
+  location.replace("/SSS-Shopping/cart.html");
 };
 
 const loadCartPage = () => {
@@ -668,7 +668,7 @@ const loadCartPage = () => {
   });
   cartLoaderref.innerHTML = tempLoadCarter;
 };
-if (location.pathname === "/SSS-Shopping/pages/cart.html") {
+if (location.pathname === "/SSS-Shopping/cart.html") {
   loadCartPage();
 }
 
@@ -696,7 +696,7 @@ const orderPageHandler = () => {
       parseInt(orderList.productID) !== parseInt(prod.productID)
   );
   localStorage.setItem("cartList", JSON.stringify(filtered));
-  location.replace("/SSS-Shopping/pages/orders.html");
+  location.replace("/SSS-Shopping/orders.html");
 };
 
 const orderPageLoad = () => {
@@ -907,7 +907,7 @@ const adminOrderPage = () => {
   adminOrderPageref.innerHTML = tempAdminOrderPage;
 };
 
-if (location.pathname === "/SSS-Shopping/pages/admin/orders.html") {
+if (location.pathname === "/SSS-Shopping/admin/orders.html") {
   adminOrderPage();
 }
 
@@ -944,6 +944,6 @@ const adminOrderStatusChange = (id) => {
     console.log(orderList);
     localStorage.setItem("orderList", JSON.stringify(orderList));
   } else {
-    location.replace("/SSS-Shopping/pages/index.html");
+    location.replace("/SSS-Shopping/index.html");
   }
 };
