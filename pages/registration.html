@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - SSS Shopping</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/scripts.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container-fluid min-vh-100">
+      <!-- full display -->
+      <div class="row d-flex align-items-center justify-content-center">
+        <!-- image div -->
+        <div class="col-6 d-flex flex-column">
+          <div class="signUpLeftSide">
+            <div class="left-side">
+              <h3 class="fs-1 text-primary-emphasis">Welcome</h3>
+              <h3 class="fs-1 text-primary-emphasis">To</h3>
+              <h3 class="fs-1 text-primary">SSS Shopping...!!!</h3>
+            </div>
+
+            <p
+              style="
+                margin-top: 20px;
+                padding: 10px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 15px;
+              "
+              class="bg-primary-subtle rounded"
+            >
+              Explore <b>SSS SHOPPING..!!!</b> - Your Gateway to Easy Shopping.
+              Browse, Pick, Enjoy. Speedy, Trusted, Effortless.
+            </p>
+          </div>
+        </div>
+        <!-- Sign Up Inputs -->
+        <div
+          class="col-6 right-side d-flex flex-column justify-content-center align-items-center min-vh-100"
+        >
+          <!-- Name Div -->
+          <div
+            class="bg-primary-subtle d-flex flex-column align-items-center p-4 rounded inputBox"
+          >
+            <p class="fs-3">Welcome..!!!</p>
+            <select class="form-select mb-3" id="regUserSeletor">
+              <option value ="0"selected>Select User Destination</option>
+              <option value="admin">Create Seller Account</option>
+              <option value="user">Create Buyer Account</option>
+            </select>
+            <div class="d-flex justify-content-center signUpInput1">
+              <input
+                class="me-2 rounded form-control"
+                ="text"
+                id="fname"
+                placeholder="First Name"
+              />
+              <input
+                class="rounded form-control"
+                type="text"
+                id="lname"
+                placeholder="Last Name"
+              />
+            </div>
+            <!-- rest inputs -->
+            <div class="d-flex flex-column signUpInput">
+              <input
+                class="my-2 rounded form-control"
+                type="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <div class="d-flex">
+                <input
+                  class="my-2 rounded form-control me-3"
+                  style="width: 30%"
+                  type="text"
+                  id="numberCountryCode"
+                  placeholder="+91"
+                  disabled
+                /><input
+                  class="my-2 rounded form-control"
+                  st
+                  type="number"
+                  id="phoneNumber"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <input
+                class="my-2 rounded form-control"
+                type="password"
+                id="password"
+                placeholder="Password"
+              />
+              <input
+                class="my-2 rounded form-control"
+                type="password"
+                id="conPass"
+                placeholder="Confirm Password"
+              />
+              <div class="d-flex mt-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="termAndCondition"
+                />
+                <p
+                  class="ms-2 justify-content-center"
+                  style="margin-top: 5px; font-size: 10px"
+                >
+                  I accept the <a href="">Terms and Policies.</a>
+                </p>
+              </div>
+              <p class="errorRef text-danger text-bold" id="signUpError"></p>
+              <button
+                id="signUpButton"
+                class="btn btn-primary d-flex text-center"
+                style="width: 20%; margin-left: 40%; padding-left: 3%"
+                onclick="registrationHandler()"
+              >
+                Sign Up
+              </button>
+              <!-- Toast Message -->
+              <div
+                id="toast"
+                class="toast position-fixed text-bg-success border-0"
+                style="top: 60px; right: 20px"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="d-flex">
+                  <div class="toast-body" id="toastMessage"></div>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

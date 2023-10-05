@@ -1,0 +1,281 @@
+/* SIGN IN PAGE */
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+.heading {
+  font-family: cursive;
+  font-weight: 700;
+  text-align: center;
+}
+.underline {
+  background-color: blue;
+  height: 3px;
+  width: auto;
+}
+.copyRight {
+  background-color: #24262b;
+}
+.loginError {
+  width: 100%;
+  height: 15px;
+}
+
+/* Sign In END */
+
+/* SIGN UP PAGE */
+
+.SignUpInput {
+  width: 60%;
+}
+.SignUpInput1 {
+  width: 60%;
+}
+.reachUs {
+  padding-left: 30%;
+  padding-top: 10%;
+}
+.social a {
+  color: blue;
+}
+.button {
+  padding-right: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#signUpImage {
+  margin-left: 10%;
+  width: 550px;
+  height: 400px;
+}
+.signUpLeftSide {
+  margin-left: 150px;
+  width: 350px;
+  height: 350px;
+}
+.inputBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 15px;
+}
+.errorRef {
+  margin-top: 5px;
+  width: 100%;
+  height: 15px;
+}
+
+/* SignUp END */
+
+/* NAVBAR */
+.navbar {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.leftLinkTag,
+.rightLinkTag {
+  font-size: 12px;
+  font-weight: bold;
+}
+#logoImg {
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Product List */
+.productList {
+  display: flex;
+  margin-left: 20%;
+  margin-top: 10px;
+  width: 160px;
+  height: 150px;
+  border-radius: 10px;
+}
+.card {
+  width: 23%;
+  height: 23%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card:hover {
+  width: 23%;
+  height: 23%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 10px;
+  transition-duration: 0.5s;
+}
+.features {
+  font-size: 10px;
+  margin-left: 2px;
+}
+.featureDetails {
+  padding: 2px;
+  margin-left: 5px;
+  width: 100%;
+}
+#addToCart {
+  margin-left: 20%;
+}
+
+/* Navbar END */
+
+/* Footer */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
+body {
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 30px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: aliceblue;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+ul > li {
+  color: aliceblue;
+}
+
+/* Footer END */
+
+/* Order SECTION start */
+
+.orderCard {
+  height: 50%;
+}
+.orderCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 3px 15px;
+  transition-duration: 0.1s;
+  height: 50%;
+}
+.productTracking {
+  color: aliceblue;
+  width: 50%;
+}
+.estimateDelivery {
+  color: aliceblue;
+  width: 50%;
+}
+.stockQuantity {
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 3px 15px;
+}
+.totalPrice {
+  width: 100%;
+  height: 2px;
+}
+.DeleteButton {
+  margin-left: 45%;
+  margin-top: 10%;
+}
+.deliveryAddress {
+  color: aliceblue;
+}
+.orderedDate {
+  color: aliceblue;
+}
+
+/* Admin Product Page Starts */
+.adminProductList {
+  height: 120px;
+  width: 100px;
+  margin-left: 30px;
+  margin-top: 30%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 10px;
+}
