@@ -13,7 +13,7 @@ let intialUsers = [
     id: 2,
     firstName: "Subramani",
     lastName: "S",
-    email: "saravanan.subramani@kumaran.com",
+    email: "sarav@kumaran.com",
     phoneNumber: 6379888041,
     password: "2001",
   },
